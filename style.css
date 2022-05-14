@@ -1,0 +1,117 @@
+:root{
+    --bg-color: #FFFFFF;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+*{
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+
+.hero{
+    width: 80%;
+    margin: auto;
+
+}
+
+.navbar{
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+
+}
+
+ul{
+    flex: 1;
+    text-align: right;
+
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px;
+    position: relative;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #000;
+    padding: 0 10px;
+}
+
+ul li a::after{
+    content:'';
+    width: 0%;
+    background-color: #f14a60;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:-55px;
+    transition: .5s;
+}
+
+ul li a:hover::after{
+    width: 100%;
+}
+
+.navbar-icons img{
+    height: 25px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.banner{
+    display: flex;
+    margin-top: 80px;
+
+}
+.left-column, .right-column{
+    flex-basis: 50%;
+}
+.right-column img{
+    width: 100%
+}
+
+.search-box{
+    width: 45%;
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ad1111be;
+}
+
+.search-box img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.search-box input{
+    width: 100%;
+    border: 0;
+    outline: none;
+
+}
+
+.left-column h2{
+    font-size: 80px;
+}
+
+.left-column h3{
+    font-size: 35px;
+}
+span{
+    color:#FF6981;
+}
+
+@media (max-width: 1000px ) {
+    .left-column, .right-column{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
